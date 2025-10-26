@@ -59,11 +59,14 @@ public class lab6task2 extends Application {
         door.setStrokeWidth(2);
         
         //add circle for the sun 
-        Circle myCircle = new Circle();
-        myCircle.setCenterX(900);
-        myCircle.setCenterY(50);
-        myCircle.setRadius(50);
-        myCircle.setFill(Color.YELLOW);
+        Circle sun = new Circle();
+        sun.setCenterX(900);
+        sun.setCenterY(90);
+        sun.setRadius(45);
+        sun.setFill(Color.YELLOW);
+        sun.setStroke(Color.ORANGE);
+        sun.setStrokeWidth(3);
+        
         
         //create chimney
         Rectangle chimney = new Rectangle(560,250,40,80);
@@ -72,13 +75,13 @@ public class lab6task2 extends Application {
         chimney.setStrokeWidth(2);
        
         //grass
-        Rectangle grass = new Rectangle(0,700,1000,100);
+        Rectangle grass = new Rectangle(0,600,850,100);
         grass.setFill(Color.GREEN);
         grass.setStroke(Color.DARKGREEN);
         grass.setStrokeWidth(2);
         
-        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door);
-        Scene scene = new Scene(root, 1000, 1000);
+        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun);
+        Scene scene = new Scene(root, 950, 650);
         stage.setScene(scene);
         
         stage.show();
