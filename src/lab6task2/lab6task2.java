@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 /**
  * Did the lab in class, Thursday 16th October 
- * @author 6303129
+ * @author Vedika
  */
 public class lab6task2 extends Application {
 
@@ -31,15 +31,13 @@ public class lab6task2 extends Application {
     @Override
     public void start(Stage stage) {
         
-        //rectangle 
-        //polygone 
+        //base
         Rectangle base = new Rectangle(200,300,500,300);
         base.setFill(Color.LIGHTBLUE);
         base.setStroke(Color.DARKBLUE);
         base.setStrokeWidth(3);
         
-        
-        //use polygone to make the triangle , the roof 
+        //roof
         Polygon roof = new Polygon(200.0,300.0,
                 700.0,300.0, 
                 450.0, 180.0);
@@ -64,24 +62,22 @@ public class lab6task2 extends Application {
         pane2.setStroke(Color.DARKBLUE);
         pane1.setStrokeWidth(3);
         pane2.setStrokeWidth(3);
-        
-        //vertical panes 
+       
         // vertical window panes
         Line pane1v = new Line(300, 360, 300, 440); // middle of window1
         Line pane2v = new Line(600, 360, 600, 440); // middle of window2
-
         pane1v.setStroke(Color.DARKBLUE);
         pane2v.setStroke(Color.DARKBLUE);
         pane1v.setStrokeWidth(3);
         pane2v.setStrokeWidth(3);
         
-        //need to add the door
+        //Door
         Rectangle door = new Rectangle(400,420,120,180);
         door.setFill(Color.SIENNA);
         door.setStroke(Color.BLACK);
         door.setStrokeWidth(2);
         
-        //add circle for the sun 
+        //Sun 
         Circle sun = new Circle();
         sun.setCenterX(820);
         sun.setCenterY(90);
@@ -90,8 +86,7 @@ public class lab6task2 extends Application {
         sun.setStroke(Color.ORANGE);
         sun.setStrokeWidth(3);
         
-        
-        //create chimney
+        //Chimney
         Rectangle chimney = new Rectangle(560,200,40,80);
         chimney.setFill(Color.GRAY);
         chimney.setStroke(Color.BLACK);
@@ -106,7 +101,6 @@ public class lab6task2 extends Application {
         Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun, pane1, pane2,pane1v, pane2v);
         Scene scene = new Scene(root, 950, 650);
         stage.setScene(scene);
-        
         stage.show();
     }
 }
