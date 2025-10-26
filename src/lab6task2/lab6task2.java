@@ -39,10 +39,12 @@ public class lab6task2 extends Application {
         
         
         //use polygone to make the triangle , the roof 
-        Polygon triangle = new Polygon(450,350,
-                700,500, 
-                200, 500);
-        triangle.setFill(Color.BROWN);
+        Polygon roof = new Polygon(200.0,350.0,
+                700.0,350.0, 
+                450.0, 230.0);
+        roof.setFill(Color.SADDLEBROWN);
+        roof.setStroke(Color.BROWN);
+        roof.setStrokeWidth(3);
       
         //add windows
         Rectangle window1 = new Rectangle(270,600,70,70);
@@ -51,8 +53,10 @@ public class lab6task2 extends Application {
         window2.setFill(Color.RED);
         
         //need to add the door
-        Rectangle door = new Rectangle(400,800,100,800);
-        door.setFill(Color.GREEN);
+        Rectangle door = new Rectangle(440,470,120,180);
+        door.setFill(Color.SIENNA);
+        door.setStroke(Color.BLACK);
+        door.setStrokeWidth(2);
         
         //add circle for the sun 
         Circle myCircle = new Circle();
@@ -66,7 +70,7 @@ public class lab6task2 extends Application {
         Chimney.setFill(Color.BLACK);
         
         
-        Pane root = new Pane(base, window1,window2, triangle, door, myCircle, Chimney);
+        Pane root = new Pane(base, window1,window2,roof, door, myCircle, Chimney);
         Scene scene = new Scene(root, 1000, 1000);
         stage.setScene(scene);
         
