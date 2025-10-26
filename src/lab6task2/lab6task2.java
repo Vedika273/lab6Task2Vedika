@@ -33,47 +33,57 @@ public class lab6task2 extends Application {
         
         //rectangle 
         //polygone 
-        Rectangle base = new Rectangle(200,350,500,300);
+        Rectangle base = new Rectangle(200,300,500,300);
         base.setFill(Color.LIGHTBLUE);
         base.setStroke(Color.DARKBLUE);
         base.setStrokeWidth(3);
         
         
         //use polygone to make the triangle , the roof 
-        Polygon roof = new Polygon(200.0,350.0,
-                700.0,350.0, 
-                450.0, 230.0);
+        Polygon roof = new Polygon(200.0,300.0,
+                700.0,300.0, 
+                450.0, 180.0);
         roof.setFill(Color.SADDLEBROWN);
         roof.setStroke(Color.BROWN);
         roof.setStrokeWidth(3);
       
         //add windows
-        Rectangle window1 = new Rectangle(260,410,80,80);
-        Rectangle window2 = new Rectangle(560,410,80,80);
+        Rectangle window1 = new Rectangle(260,360,80,80);
+        Rectangle window2 = new Rectangle(560,360,80,80);
         window1.setFill(Color.LIGHTYELLOW);
         window2.setFill(Color.LIGHTYELLOW);
-        window1.setStroke(Color.DARKGRAY);
-        window2.setStroke(Color.DARKGRAY);
+        window1.setStroke(Color.DARKBLUE);
+        window2.setStroke(Color.DARKBLUE);
         window1.setStrokeWidth(2);
         window2.setStrokeWidth(2);
         
         //add the horizontal window panes
-        Line pane1 = new Line(260, 450, 340, 450); // window1 middle line
-        Line pane2 = new Line(560, 450, 640, 450); // window2 middle line
+        Line pane1 = new Line(260, 400, 340, 400); // window1 middle line
+        Line pane2 = new Line(560, 400, 640, 400); // window2 middle line
         pane1.setStroke(Color.DARKBLUE);
         pane2.setStroke(Color.DARKBLUE);
         pane1.setStrokeWidth(3);
         pane2.setStrokeWidth(3);
         
+        //vertical panes 
+        // vertical window panes
+        Line pane1v = new Line(300, 360, 300, 440); // middle of window1
+        Line pane2v = new Line(600, 360, 600, 440); // middle of window2
+
+        pane1v.setStroke(Color.DARKBLUE);
+        pane2v.setStroke(Color.DARKBLUE);
+        pane1v.setStrokeWidth(3);
+        pane2v.setStrokeWidth(3);
+        
         //need to add the door
-        Rectangle door = new Rectangle(400,470,120,180);
+        Rectangle door = new Rectangle(400,420,120,180);
         door.setFill(Color.SIENNA);
         door.setStroke(Color.BLACK);
         door.setStrokeWidth(2);
         
         //add circle for the sun 
         Circle sun = new Circle();
-        sun.setCenterX(900);
+        sun.setCenterX(700);
         sun.setCenterY(90);
         sun.setRadius(45);
         sun.setFill(Color.YELLOW);
@@ -82,7 +92,7 @@ public class lab6task2 extends Application {
         
         
         //create chimney
-        Rectangle chimney = new Rectangle(560,250,40,80);
+        Rectangle chimney = new Rectangle(560,200,40,80);
         chimney.setFill(Color.GRAY);
         chimney.setStroke(Color.BLACK);
         chimney.setStrokeWidth(2);
@@ -93,7 +103,7 @@ public class lab6task2 extends Application {
         grass.setStroke(Color.DARKGREEN);
         grass.setStrokeWidth(2);
         
-        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun, pane1, pane2);
+        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun, pane1, pane2,pane1v, pane2v);
         Scene scene = new Scene(root, 950, 650);
         stage.setScene(scene);
         
