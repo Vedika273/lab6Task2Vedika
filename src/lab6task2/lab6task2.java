@@ -83,7 +83,7 @@ public class lab6task2 extends Application {
         
         //add circle for the sun 
         Circle sun = new Circle();
-        sun.setCenterX(700);
+        sun.setCenterX(820);
         sun.setCenterY(90);
         sun.setRadius(45);
         sun.setFill(Color.YELLOW);
