@@ -66,11 +66,16 @@ public class lab6task2 extends Application {
         myCircle.setFill(Color.YELLOW);
         
         //create chimney
-        Rectangle Chimney = new Rectangle(500,400,50,100);
-        Chimney.setFill(Color.BLACK);
+        Rectangle chimney = new Rectangle(500,400,50,100);
+        chimney.setFill(Color.BLACK);
+       
+        //grass
+        Rectangle grass = new Rectangle(0,700,1000,100);
+        grass.setFill(Color.GREEN);
+        grass.setStroke(Color.DARKGREEN);
+        grass.setStrokeWidth(2);
         
-        
-        Pane root = new Pane(base, window1,window2,roof, door, myCircle, Chimney);
+        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door);
         Scene scene = new Scene(root, 1000, 1000);
         stage.setScene(scene);
         
