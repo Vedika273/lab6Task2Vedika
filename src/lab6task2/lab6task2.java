@@ -75,7 +75,7 @@ public class lab6task2 extends Application {
         chimney.setStrokeWidth(2);
        
         //grass
-        Rectangle grass = new Rectangle(0,600,850,100);
+        Rectangle grass = new Rectangle(0,600,950,50);
         grass.setFill(Color.GREEN);
         grass.setStroke(Color.DARKGREEN);
         grass.setStrokeWidth(2);
