@@ -32,8 +32,10 @@ public class lab6task2 extends Application {
         
         //rectangle 
         //polygone 
-        Rectangle base = new Rectangle(200,500,500,500);
-        base.setFill(Color.BLUE);
+        Rectangle base = new Rectangle(200,350,500,300);
+        base.setFill(Color.LIGHTBLUE);
+        base.setStroke(Color.DARKBLUE);
+        base.setStrokeWidth(3);
         
         
         //use polygone to make the triangle , the roof 
