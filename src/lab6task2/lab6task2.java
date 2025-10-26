@@ -47,13 +47,17 @@ public class lab6task2 extends Application {
         roof.setStrokeWidth(3);
       
         //add windows
-        Rectangle window1 = new Rectangle(270,600,70,70);
-        Rectangle window2 = new Rectangle(550,600,70,70);
-        window1.setFill(Color.RED);
-        window2.setFill(Color.RED);
+        Rectangle window1 = new Rectangle(260,410,80,80);
+        Rectangle window2 = new Rectangle(560,410,80,80);
+        window1.setFill(Color.LIGHTYELLOW);
+        window2.setFill(Color.LIGHTYELLOW);
+        window1.setStroke(Color.DARKGRAY);
+        window2.setStroke(Color.DARKGRAY);
+        window1.setStrokeWidth(2);
+        window2.setStrokeWidth(2);
         
         //need to add the door
-        Rectangle door = new Rectangle(440,470,120,180);
+        Rectangle door = new Rectangle(400,470,120,180);
         door.setFill(Color.SIENNA);
         door.setStroke(Color.BLACK);
         door.setStrokeWidth(2);
