@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -56,6 +57,14 @@ public class lab6task2 extends Application {
         window1.setStrokeWidth(2);
         window2.setStrokeWidth(2);
         
+        //add the horizontal window panes
+        Line pane1 = new Line(260, 450, 340, 450); // window1 middle line
+        Line pane2 = new Line(560, 450, 640, 450); // window2 middle line
+        pane1.setStroke(Color.DARKBLUE);
+        pane2.setStroke(Color.DARKBLUE);
+        pane1.setStrokeWidth(3);
+        pane2.setStrokeWidth(3);
+        
         //need to add the door
         Rectangle door = new Rectangle(400,470,120,180);
         door.setFill(Color.SIENNA);
@@ -84,7 +93,7 @@ public class lab6task2 extends Application {
         grass.setStroke(Color.DARKGREEN);
         grass.setStrokeWidth(2);
         
-        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun);
+        Pane root = new Pane(grass, base, roof, chimney, window1, window2, door, sun, pane1, pane2);
         Scene scene = new Scene(root, 950, 650);
         stage.setScene(scene);
         
